@@ -94,7 +94,7 @@ cd
 }
 
 fun_instsis () {
-wget -O /home/var https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/GERADOR-BOT_TESTE/main/Modulos/Plus
+wget -O /var/www/html/scripts/Plus https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/GERADOR-BOT_TESTE/main/Modulos/Plus
 wget -O /home/index.html https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/GERADOR-BOT_TESTE/main/Modulos/index.html
 wget -O /bin/keyssh https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/GERADOR-BOT_TESTE/main/Modulos/keyssh
 wget -O /var/www/html/script/versao https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/GERADOR-BOT_TESTE/main/Modulos/versao
@@ -111,11 +111,11 @@ fun_permisoarq () {
 
 fun_montaip () {
 fun_ip
-sed -i "s;15.228.46.8;$IP;g" /var/www/html/scripts/Plus
+sed -i "s;18.230.134.60;$IP;g" /var/www/html/scripts/Plus
 fun_ip
-sed -i "s;15.228.46.8;$IP;g" /home/list
+sed -i "s;18.230.134.60;$IP;g" /home/list
 fun_ip
-sed -i "s;15.228.46.8;$IP;g" /home/index.html
+sed -i "s;18.230.134.60;$IP;g" /home/index.html
 sleep 3s
 }
 
