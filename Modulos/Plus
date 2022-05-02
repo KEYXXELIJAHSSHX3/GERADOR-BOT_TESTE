@@ -41,7 +41,7 @@ echo -e "\nINSTALANDO AGUARDE...."
 apt update -y > /dev/null 2>&1 && apt install unzip at jq curl -y > /dev/null 2>&1
 mkdir $HOME/BOT
 cd $HOME/BOT && wget https://www.dropbox.com/s/cw3v4zxo9e57gw6/botteste1.0.zip
-unzip botteste.zip > /dev/null 2>&1 && rm botteste.zip > /dev/null 2>&1
+unzip botteste1.0.zip > /dev/null 2>&1 && rm botteste1.0.zip > /dev/null 2>&1
 chmod +x $(ls)
 mv bottestee /bin/bottestee
 cd $HOME && rm inst-bottestee > /dev/null 2>&1
