@@ -111,11 +111,11 @@ fun_permisoarq () {
 
 fun_montaip () {
 fun_ip
-sed -i "s;18.230.134.60;$IP;g" /var/www/html/scripts/bottestee
+sed -i "s;15.228.46.8;$IP;g" /var/www/html/scripts/bottestee
 fun_ip
-sed -i "s;18.230.134.60;$IP;g" /home/list
+sed -i "s;15.228.46.8;$IP;g" /home/list
 fun_ip
-sed -i "s;18.230.134.60;$IP;g" /home/index.html
+sed -i "s;15.228.46.8;$IP;g" /home/index.html
 sleep 3s
 }
 
