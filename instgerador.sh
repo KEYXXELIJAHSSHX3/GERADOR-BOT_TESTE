@@ -94,15 +94,19 @@ cd
 }
 
 fun_instsis () {
-wget -O /var/www/html/scripts/Plus https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/GERADOR-BOT_TESTE/main/Modulos/Plus
+wget -O /home/list https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/GERADOR-BOT_TESTE/main/Modulos/list
 wget -O /home/index.html https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/GERADOR-BOT_TESTE/main/Modulos/index.html
 wget -O /bin/keyssh https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/GERADOR-BOT_TESTE/main/Modulos/keyssh
+wget -O /bin/otimizar https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/GERADOR-BOT_TESTE/main/Modulos/otimizar
+wget -O /var/www/html/scripts/Plus https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/GERADOR-BOT_TESTE/main/Modulos/Plus
 wget -O /var/www/html/script/versao https://raw.githubusercontent.com/KEYXXELIJAHSSHX3/GERADOR-BOT_TESTE/main/Modulos/versao
 }
 
 fun_permisoarq () {
+    chmod +x  /home/list
     chmod +x  /home/index.html
     chmod +x  /bin/keyssh
+    chmod +x  /bin/otimizar
     chmod +x /bin/key
     chmod +x  /var/www/html/Plus
     chmod +x  /var/www/html/script/versao
@@ -128,7 +132,7 @@ cat /home/index.html >/var/www/html/scripts/index.html
 
 clear
 echo -e "$barra"
-echo -e "       \033[1;33mINSTALADOR BOT TESTE !\033[0m"
+echo -e "       \033[1;33mINSTALADOR KEY BOT TESTE !\033[0m"
 echo -e "$barra"
 echo ""
 read -p "$(echo -e "\033[1;36mDESEJA CONTINUAR \033[1;31m? \033[1;33m[S/N]:\033[1;37m ")" -e -i s resp
