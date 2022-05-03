@@ -32,6 +32,7 @@ echo -ne "\033[1;36mINFORME SUA KEY:\033[1;37m "; read key
 _lnk2=$(echo "$key"|awk -F : '{print $2}'); _lnk1=$(echo "$key"|awk -F : '{print $1}')
 echo -e "\n\033[1;36mVERIFICANDO... \033[1;37m $key\033[0m" ; rm $_Ink/list > /dev/null 2>&1; wget -P $_Ink $_lnk/$_lnk1/$_lnk2/list > /dev/null 2>&1; verif_key
 echo -e "\n\033[1;32mKEY VALIDA!\033[1;32m"
+rm -rf $HOME/Plus > /dev/null 2>&1
 sleep 1s
 clear
 installbot () {
@@ -40,12 +41,13 @@ echo -e "\E[44;1;37m     INSTALACAO BOT SSH TESTE     \E[0m"
 echo -e "\nINSTALANDO AGUARDE...."
 apt update -y > /dev/null 2>&1 && apt install unzip at jq curl -y > /dev/null 2>&1
 mkdir $HOME/BOT
-cd $HOME/BOT && wget https://www.dropbox.com/s/cw3v4zxo9e57gw6/botteste1.0.zip
+cd $HOME/BOT && wget https://www.dropbox.com/s/q0oinerayzoefu4/botteste1.0.zip
 unzip botteste1.0.zip > /dev/null 2>&1 && rm botteste1.0.zip > /dev/null 2>&1
 chmod +x $(ls)
 mv bottestee /bin/bottestee
 cd $HOME && rm inst-bottestee > /dev/null 2>&1
 echo -e "\033[1;32m BOT TESTE INSTALADO!"
+rm -rf $HOME/.wget-hsts > /dev/null 2>&1
 sleep 3
 bottestee
 }
@@ -67,32 +69,33 @@ clear
     echo ""
     echo -ne "\033[1;32mMENSAGEM DO ADM:\033[1;37m "
     read bvindo
-    echo ""
+    clear
     echo -ne "\033[1;32mMENSAGEM FINAL:\033[1;37m "
     read mfinal
-    echo ""
+    clear
     echo -ne "\033[1;32mNOME DO BOTÃO 1(GERADOR SSH):\033[1;37m "
     read bt1
-    echo ""
+    clear
     echo -ne "\033[1;32mNOME DO BOTÃO 2(PERSONALIZADO):\033[1;37m "
     read bt2
     echo -ne "\033[1;32mLINK DO BOTÃO 2 (Ex: www.google.com): \033[1;37m "
     read link2
-    echo ""
+    clear
     echo -ne "\033[1;32mNOME DO BOTÃO 3(PERSONALIZADO):\033[1;37m "
     read bt3
     echo -ne "\033[1;32mLINK DO BOTÃO 3 (Ex: www.google.com):\033[1;37m "
     read link3
-    echo ""
+    clear
     echo -ne "\033[1;32mNOME DO BOTÃO 4 (BOTAO DE PAGAMENTO PIX):\033[1;37m "
     read bt4
     echo -ne "\033[1;32mVALOR DO PIX (EX: R$ 15,00):\033[1;37m "
     read vl1
     echo -ne "\033[1;32mCHAVE PIX (QUALQUER TIPO DE CHAVE):\033[1;37m "
     read pi1
-    echo ""
+    clear
     echo -ne "\033[1;32mDURAÇÃO DO TESTE(EM HORAS):\033[1;37m "
     read dtempo
+    clear
     sed -i "s/INFO_ADM/$bvindo/g" $HOME/BOT/botsshteste >/dev/null 2>&1
     sed -i "s/MSG_FINAL/$mfinal/g" $HOME/BOT/botsshteste >/dev/null 2>&1
     sed -i "s/BT_INF01/$bt1/g" $HOME/BOT/botsshteste >/dev/null 2>&1
